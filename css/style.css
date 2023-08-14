@@ -11975,6 +11975,7 @@ textarea.form-control-lg {
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -11992,6 +11993,42 @@ body {
   cursor: pointer;
 }
 
-.leftHero {
+.btn-success {
+  padding: 12px 24px 14px 24px;
+  border-radius: 200px;
+}
+
+.btn-outline-success {
+  padding: 12px 22px 14px 22px;
+  border-radius: 200px;
+}
+
+.buttons a {
+  margin-right: 36px;
+}
+
+.hero {
+  height: 100%;
   background-color: rgb(220, 193, 171);
+}
+.hero__content {
+  width: 70%;
+}
+.hero__content h1, .hero__content .h1 {
+  font-family: Montserrat;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px; /* 116.667% */
+}
+.hero__content p {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.carousel-item img {
+  max-height: 840px;
 }/*# sourceMappingURL=style.css.map */

@@ -5,6 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>GiardDesign</title>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<header class="mainHeader d-flex justify-content-center">
@@ -84,23 +90,111 @@
 				</div>
 			</nav>
 		</header>
-		<main class="container">
+		<main class="main">
 			<section class="hero">
-				<div class="container">
-					<div class="row">
-                        <div class="col-md-6">
-                            <div class="text">
-                            <h1>Nowoczesna aranżacja Twojego ogrodu</h1>
-                            <p class="lead">
-                                Marka GiardDesign to wieloletnie doświadczenie i
-                                wysoka estetyka realizacji. Oferujemy kompleksowy
-                                zakres usług z indywidualnym podejściem do każdego
-                                projektu.
-                            </p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src=""/>
-                        </div>
+				<div class="container-fluid h-100">
+					<div class="row animate-in-down">
+						<div
+							class="d-flex col-md-6 align-self-center justify-content-center text-color text-center text-lg-start"
+						>
+							<div class="hero__content">
+								<h1>Nowoczesna aranżacja Twojego ogrodu</h1>
+								<p class="my-4">
+									Marka GiardDesign to wieloletnie
+									doświadczenie i wysoka estetyka realizacji.
+									Oferujemy kompleksowy zakres usług z
+									indywidualnym podejściem do każdego
+									projektu.
+								</p>
+								<a href="#" class="btn mb-3 p-2 btn-success"
+									>Skontaktuj się z nami</a
+								>
+								<a
+									href="#"
+									class="btn mb-3 p-2 btn-outline-success"
+									>Zobacz nasze realizacje
+									<i class="bi bi-arrow-down"></i
+								></a>
+							</div>
+						</div>
+						<div class="p-0 col-md-6">
+							<div
+								id="carouselExampleIndicators"
+								class="carousel slide"
+							>
+								<div class="carousel-indicators">
+									<button
+										type="button"
+										data-bs-target="#carouselExampleIndicators"
+										data-bs-slide-to="0"
+										class="active"
+										aria-current="true"
+										aria-label="Slide 1"
+									></button>
+									<button
+										type="button"
+										data-bs-target="#carouselExampleIndicators"
+										data-bs-slide-to="1"
+										aria-label="Slide 2"
+									></button>
+									<button
+										type="button"
+										data-bs-target="#carouselExampleIndicators"
+										data-bs-slide-to="2"
+										aria-label="Slide 3"
+									></button>
+								</div>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img
+											src="./images/photo-9.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item">
+										<img
+											src="./images/photo-1.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item">
+										<img
+											src="./images/photo-5.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+								</div>
+								<button
+									class="carousel-control-prev"
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide="prev"
+								>
+									<span
+										class="carousel-control-prev-icon"
+										aria-hidden="true"
+									></span>
+									<span class="visually-hidden"
+										>Previous</span
+									>
+								</button>
+								<button
+									class="carousel-control-next"
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide="next"
+								>
+									<span
+										class="carousel-control-next-icon"
+										aria-hidden="true"
+									></span>
+									<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
