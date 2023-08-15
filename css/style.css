@@ -12229,6 +12229,13 @@ body {
   line-height: 115%;
 }
 
+.grid-item {
+  width: 200px;
+}
+.grid-item img {
+  width: 100%;
+}
+
 @media (max-width: 575.98px) {
   .hero__content h1, .hero__content .h1 {
     font-size: 30px;
