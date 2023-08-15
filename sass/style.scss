@@ -246,6 +246,19 @@ body {
 			}
 		}
 	}
+	.about {
+		&__right {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $green;
+			width: 100%;
+		}
+		&__content {
+			width: 90%;
+			text-align: center;
+		}
+	}
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
 	.hero {

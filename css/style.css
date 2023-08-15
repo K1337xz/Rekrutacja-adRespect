@@ -12203,6 +12203,17 @@ body {
     width: 310px;
     height: 315px;
   }
+  .about__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 91, 49);
+    width: 100%;
+  }
+  .about__content {
+    width: 90%;
+    text-align: center;
+  }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   .hero__content h1, .hero__content .h1 {
