@@ -12171,12 +12171,62 @@ body {
   background-color: rgb(27, 91, 49);
   width: 50%;
 }
+.about__customButtonPadding {
+  padding: 12px 22px 14px 22px;
+}
 .about__content {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 50%;
+}
+.about__content h4, .about__content .h4 {
+  font-family: Inter;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 115%;
+}
+.about__content p {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.16px;
+}
+.about__content p:first-child {
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  letter-spacing: -0.12px;
+}
+
+.projects {
+  padding: 120px 0px 44px 0px;
+  background-color: rgb(220, 193, 171);
+}
+.projects__top {
+  padding-left: 160px;
+}
+.projects__top span {
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.12px;
+  color: rgb(27, 91, 49);
+}
+.projects__top h2, .projects__top .h2 {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 115%;
 }
 
 @media (max-width: 575.98px) {

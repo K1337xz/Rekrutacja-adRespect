@@ -1,23 +1,25 @@
 {
-  "name": "rekrutacja-adrespect",
-  "version": "1.0.0",
-  "description": "zadanie rekrutacyjne dla adRespect",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/K1337xz/Rekrutacja-adRespect.git"
-  },
-  "author": "Jakub Buksa",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/K1337xz/Rekrutacja-adRespect/issues"
-  },
-  "homepage": "https://github.com/K1337xz/Rekrutacja-adRespect#readme",
-  "dependencies": {
-    "bootstrap": "^5.3.1",
-    "bootstrap-icons": "^1.10.5"
-  }
+	"name": "rekrutacja-adrespect",
+	"version": "1.0.0",
+	"description": "zadanie rekrutacyjne dla adRespect",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/K1337xz/Rekrutacja-adRespect.git"
+	},
+	"author": "Jakub Buksa",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/K1337xz/Rekrutacja-adRespect/issues"
+	},
+	"homepage": "https://github.com/K1337xz/Rekrutacja-adRespect#readme",
+	"dependencies": {
+		"bootstrap": "^5.3.1",
+		"bootstrap-icons": "^1.10.5",
+		"masonry-layout": "^4.2.2"
+	}
 }

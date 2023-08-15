@@ -207,15 +207,63 @@ body {
 		background-color: $green;
 		width: 50%;
 	}
+	&__customButtonPadding {
+		padding: 12px 22px 14px 22px;
+	}
 	&__content {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 100%;
 		width: 50%;
+		h4 {
+			font-family: Inter;
+			font-size: 48px;
+			font-style: italic;
+			font-weight: 500;
+			line-height: 115%;
+		}
+		p {
+			font-family: Inter;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%; /* 24px */
+			letter-spacing: -0.16px;
+			&:first-child {
+				font-family: Inter;
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%; /* 18px */
+				letter-spacing: -0.12px;
+			}
+		}
 	}
 }
-
+.projects {
+	padding: 120px 0px 44px 0px;
+	background-color: $beige;
+	&__top {
+		padding-left: 160px;
+		span {
+			font-family: Inter;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%;
+			letter-spacing: -0.12px;
+			color: $green;
+		}
+		h2 {
+			font-family: Montserrat;
+			font-size: 48px;
+			font-style: italic;
+			font-weight: 500;
+			line-height: 115%;
+		}
+	}
+}
 @media (max-width: 575.98px) {
 	.hero {
 		&__content {
