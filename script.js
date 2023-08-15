@@ -1,8 +1,10 @@
 window.onload = () => {
 	const grid = document.querySelector(".grid");
 
-	const masonary = new Masonry(grid, {
+	const masonry = new Masonry(grid, {
 		itemSelector: ".grid-item",
-		gutter: 10,
+		gutter: 43,
+		originTop: true,
+		fitWidth: true,
 	});
 };
