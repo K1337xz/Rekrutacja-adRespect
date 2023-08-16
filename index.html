@@ -131,6 +131,7 @@
 											src="./images/photo-9.jpg"
 											class="d-block w-100"
 											alt="..."
+											lazy
 										/>
 									</div>
 									<div class="carousel-item">
@@ -138,6 +139,7 @@
 											src="./images/photo-1.jpg"
 											class="d-block w-100"
 											alt="..."
+											lazy
 										/>
 									</div>
 									<div class="carousel-item">
@@ -145,6 +147,7 @@
 											src="./images/photo-11.jpg"
 											class="d-block w-100"
 											alt="..."
+											lazy
 										/>
 									</div>
 								</div>
@@ -318,39 +321,70 @@
 						<h2>Nasze Projekty</h2>
 					</div>
 				</div>
-				<div class="bla container-fluid">
+				<div class="projects__gridWrapper container-fluid">
 					<div class="grid">
 						<div class="grid-sizer"></div>
 						<div class="grid-item grid-item--height1">
-							<img src="./images/photo-1.jpg" alt="" />
-						</div>
-						<div class="grid-item">
 							<img src="./images/photo-2.jpg" alt="" />
 						</div>
 						<div class="grid-item">
-							<img src="./images/photo-3.jpg" alt="" />
+							<img src="./images/photo-8.jpg" alt="" />
+						</div>
+						<div class="grid-item grid-item--height3">
+							<img src="./images/photo-7.jpg" alt="" />
+						</div>
+
+						<div class="grid-item grid-item--height3">
+							<img src="./images/photo-12.jpg" alt="" />
+						</div>
+						<div class="grid-item grid-item--height1">
+							<img src="./images/photo-1.jpg" alt="" />
+						</div>
+
+						<div class="grid-item grid-item--height3">
+							<img src="./images/photo-11.jpg" alt="" />
 						</div>
 
 						<div class="grid-item">
 							<img src="./images/photo-5.jpg" alt="" />
 						</div>
 						<div class="grid-item">
-							<img src="./images/photo-6.jpg" alt="" />
-						</div>
-
-						<div class="grid-item">
-							<img src="./images/photo-8.jpg" alt="" />
-						</div>
-						<div class="grid-item">
-							<img src="./images/photo-9.jpg" alt="" />
-						</div>
-						<div class="grid-item">
 							<img src="./images/photo-10.jpg" alt="" />
 						</div>
 						<div class="grid-item">
-							<img src="./images/photo-11.jpg" alt="" />
+							<img src="./images/photo-6.jpg" alt="" />
 						</div>
 					</div>
+				</div>
+
+				<div
+					class="modal fade"
+					id="staticBackdrop"
+					data-bs-backdrop="static"
+					data-bs-keyboard="false"
+					tabindex="-1"
+					aria-labelledby="staticBackdropLabel"
+					aria-hidden="true"
+				>
+					<i class="bi bi-x-lg" data-bs-dismiss="modal"></i>
+
+					<div
+						class="modal-dialog modal-dialog-centered justify-content-center"
+					>
+						<img
+							src="images/photo-1.jpg"
+							alt="full screen image"
+							class="modalImage"
+						/>
+					</div>
+				</div>
+				<div class="projects__fade">
+					<button
+						class="projects__fade--button btn btn-outline-dark rounded-5"
+					>
+						Rozwiń
+						<i class="bi bi-arrow-down"></i>
+					</button>
 				</div>
 			</section>
 		</main>
