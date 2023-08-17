@@ -73,12 +73,13 @@ showMoreProjects.addEventListener("click", () => {
 		showMoreProjects.innerHTML = `Rozwiń ${arrowDown}`;
 		//reload masonry layout
 		const grid = document.querySelector(".grid");
-		grid.scrollIntoView();
 		const masonry = new Masonry(grid, {
 			itemSelector: ".grid-item",
 			gutter: 43,
 			originTop: true,
 			fitWidth: true,
 		});
+		grid.scrollIntoView(true);
+		window.scrollY();
 	}
 });

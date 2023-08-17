@@ -12653,6 +12653,9 @@ body {
     width: 90%;
     text-align: center;
   }
+  .about__bg {
+    height: 100%;
+  }
   .grid-item {
     width: 345px;
   }
@@ -12705,6 +12708,9 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
+  }
+  .about__bg {
+    height: 100%;
   }
   .footer {
     padding: 80px 25px;

@@ -719,6 +719,9 @@ body {
 			width: 90%;
 			text-align: center;
 		}
+		&__bg {
+			height: 100%;
+		}
 	}
 	.grid-item {
 		width: 345px;
@@ -781,6 +784,11 @@ body {
 			flex-direction: column;
 			text-align: center;
 			width: 100%;
+		}
+	}
+	.about {
+		&__bg {
+			height: 100%;
 		}
 	}
 	.footer {
