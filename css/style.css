@@ -11986,11 +11986,56 @@ body {
   gap: 48px;
 }
 .navbar__form {
+  position: relative;
+  display: flex;
   margin-left: 1rem;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.navbar__form label {
+  transition: all 0.5s ease-in;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.navbar__form label span {
+  position: absolute;
+  left: 80%;
+}
+.navbar__form--input {
+  transition: all 0.5s ease-in;
+  width: 0%;
+}
+.navbar__form.active {
+  opacity: 1;
+}
+.navbar__form.active label {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+.navbar__form.active .navbar__form--input {
+  transition: all 0.5s ease-in;
+  width: 100%;
 }
 
 .bi-search {
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+.bi-search.active {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.bi.prevImage {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  cursor: pointer;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
 }
 .bi-pencil-fill {
   font-size: 30px;
@@ -12050,41 +12095,44 @@ body {
 }
 
 .carousel-control-next {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 85%;
-  z-index: 5;
-  display: inline-block;
-  background-color: rgb(245, 240, 236);
+  top: 0;
+  bottom: 0;
+  left: 74%;
+  margin: auto 0;
+  height: 8%;
+  width: 4%;
+  background-color: rgb(17, 17, 17);
   opacity: 1;
-}
-.carousel-control-next-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  color: black;
-  background-image: none;
-}
-.carousel-control-next-icon::after {
-  font-family: "Bootstrap-icons";
-  content: "\f138";
-  font-size: 45px;
-  font-weight: 900;
+  border-radius: 50%;
 }
 .carousel-control-prev {
+  top: 0;
+  bottom: 0;
+  left: 20%;
+  margin: auto 0;
+  height: 8%;
+  width: 4%;
+  background-color: rgb(17, 17, 17);
+  opacity: 1;
+  border-radius: 50%;
+}
+.carousel-control-next-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 85%;
-  left: 70%;
+  top: 89%;
+  right: 0%;
+  width: 13%;
+  height: 11%;
+  border: none;
+  outline: none;
   z-index: 5;
   display: inline-block;
   background-color: rgb(245, 240, 236);
   opacity: 1;
 }
-.carousel-control-prev-icon {
+.carousel-control-next-hero-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12093,10 +12141,38 @@ body {
   color: black;
   background-image: none;
 }
-.carousel-control-prev-icon::after {
+.carousel-control-next-hero-icon::after {
+  font-family: "Bootstrap-icons";
+  content: "\f138";
+  font-size: 35px;
+  font-weight: 900;
+}
+.carousel-control-prev-hero {
+  position: absolute;
+  top: 89%;
+  right: 13%;
+  width: 13%;
+  height: 11%;
+  border: none;
+  outline: none;
+  z-index: 5;
+  display: inline-block;
+  background-color: rgb(245, 240, 236);
+  opacity: 1;
+}
+.carousel-control-prev-hero-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: black;
+  background-image: none;
+}
+.carousel-control-prev-hero-icon::after {
   font-family: "Bootstrap-icons";
   content: "\f12f";
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 900;
 }
 
@@ -12200,7 +12276,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
   letter-spacing: -0.16px;
 }
 .about__content p:first-child {
@@ -12208,7 +12284,7 @@ body {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 18px */
+  line-height: 150%;
   letter-spacing: -0.12px;
 }
 
@@ -12247,11 +12323,20 @@ body {
   bottom: 0;
   width: 100%;
   height: 900px;
+  transition: all 0.5s ease-in;
   background-image: linear-gradient(360deg, #dcc1ab 0%, rgba(214, 183, 158, 0) 100%);
 }
 .projects__fade--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bootstrap-icons";
   padding: 12px 22px 14px 22px;
-  margin-bottom: 66px;
+  margin-bottom: 32px;
+}
+.projects__fade.unActive {
+  transition: all 0.2s ease-in;
+  height: 0;
 }
 
 .social {
@@ -12271,7 +12356,7 @@ body {
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 48px */
+  line-height: 120%;
   letter-spacing: -2px;
 }
 .social__contentLeft h4 span, .social__contentLeft .h4 span {
@@ -12317,6 +12402,9 @@ body {
   overflow: hidden;
   margin: 0 auto;
 }
+.grid__lower {
+  display: none;
+}
 
 .grid-item {
   width: 451px;
@@ -12352,6 +12440,11 @@ body {
   }
   .carousel-item img {
     max-height: 250px;
+  }
+  .modalCarusel img {
+    width: 60vh;
+    height: 85vh;
+    max-height: 500px;
   }
   .offer {
     padding: 25px 0px 160px 0px;
@@ -12436,6 +12529,93 @@ body {
   .grid-item:hover {
     filter: blur(0.1px);
     transform: scale(1.01);
+  }
+  .carousel-control-next {
+    top: 40px;
+    bottom: 0;
+    left: 85%;
+    margin: auto 0;
+    height: 40px;
+    width: 40px;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+  .carousel-control-next-icon {
+    background-size: 70% 100%;
+    background-position: 66%;
+  }
+  .carousel-control-prev {
+    top: 40px;
+    bottom: 0;
+    left: 0%;
+    margin: auto 0;
+    height: 40px;
+    width: 40px;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+  .carousel-control-prev-icon {
+    background-size: 70% 100%;
+    background-position: 50%;
+  }
+  .carousel-control-next-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 89%;
+    right: 0%;
+    width: 13%;
+    height: 11%;
+    border: none;
+    outline: none;
+    z-index: 5;
+    display: inline-block;
+    background-color: rgb(245, 240, 236);
+    opacity: 1;
+  }
+  .carousel-control-next-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-image: none;
+  }
+  .carousel-control-next-hero-icon::after {
+    font-family: "Bootstrap-icons";
+    content: "\f138";
+    font-size: 35px;
+    font-weight: 900;
+  }
+  .carousel-control-prev-hero {
+    position: absolute;
+    top: 89%;
+    right: 13%;
+    width: 13%;
+    height: 11%;
+    border: none;
+    outline: none;
+    z-index: 5;
+    display: inline-block;
+    background-color: rgb(245, 240, 236);
+    opacity: 1;
+  }
+  .carousel-control-prev-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-image: none;
+  }
+  .carousel-control-prev-hero-icon::after {
+    font-family: "Bootstrap-icons";
+    content: "\f12f";
+    font-size: 35px;
+    font-weight: 900;
   }
 }
 @media (min-width: 575.98px) and (max-width: 767.98px) {
