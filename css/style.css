@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&family=Montserrat:ital,wght@0,100;0,300;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11976,6 +11977,11 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  background-color: rgb(245, 240, 236);
+}
+
+.mainHeader {
+  background-color: rgb(255, 255, 255);
 }
 
 .navbar {
@@ -12070,20 +12076,25 @@ body {
 
 .hero {
   height: 100%;
+}
+.hero__left {
   background-color: rgb(220, 193, 171);
 }
 .hero__content {
-  width: 70%;
+  width: 56%;
+}
+.hero__content--body {
+  gap: 72px;
 }
 .hero__content h1, .hero__content .h1 {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 60px;
   font-style: normal;
   font-weight: 500;
   line-height: 70px;
 }
 .hero__content p {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -12181,6 +12192,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 1rem;
   gap: 96px;
   padding: 120px 0px 160px 0px;
   background-color: rgb(245, 240, 236);
@@ -12190,7 +12202,7 @@ body {
   width: 100%;
 }
 .offer__content h2, .offer__content .h2 {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
@@ -12198,7 +12210,7 @@ body {
   letter-spacing: -1.44px;
 }
 .offer__content p {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -12207,7 +12219,7 @@ body {
   width: 100%;
 }
 .offer__content p:first-child {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -12265,14 +12277,14 @@ body {
   width: 50%;
 }
 .about__content h4, .about__content .h4 {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 48px;
   font-style: italic;
   font-weight: 500;
   line-height: 115%;
 }
 .about__content p {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -12280,7 +12292,7 @@ body {
   letter-spacing: -0.16px;
 }
 .about__content p:first-child {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -12297,7 +12309,7 @@ body {
   padding-left: 160px;
 }
 .projects__top span {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -12306,7 +12318,7 @@ body {
   color: rgb(27, 91, 49);
 }
 .projects__top h2, .projects__top .h2 {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-style: italic;
   font-weight: 500;
@@ -12352,7 +12364,7 @@ body {
   justify-content: center;
 }
 .social__contentLeft h4, .social__contentLeft .h4 {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -12360,7 +12372,7 @@ body {
   letter-spacing: -2px;
 }
 .social__contentLeft h4 span, .social__contentLeft .h4 span {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 40px;
   font-style: italic;
   font-weight: 500;
@@ -12430,7 +12442,26 @@ body {
   transform: scale(1.01);
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateY(20%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
 @media (max-width: 575.98px) {
+  .hero__content {
+    width: 100%;
+  }
+  .hero__content--body {
+    gap: 10px;
+  }
   .hero__content h1, .hero__content .h1 {
     font-size: 30px;
     line-height: 28px;
@@ -12617,8 +12648,17 @@ body {
     font-size: 35px;
     font-weight: 900;
   }
+  .hidden {
+    transform: translateY(5%);
+  }
+  .show {
+    transform: translateY(0);
+  }
 }
 @media (min-width: 575.98px) and (max-width: 767.98px) {
+  .hero__content--body {
+    gap: 20px;
+  }
   .hero__content h1, .hero__content .h1 {
     font-size: 30px;
     line-height: 28px;
@@ -12628,6 +12668,93 @@ body {
   }
   .carousel-item img {
     max-height: 250px;
+  }
+  .carousel-control-next {
+    top: 40px;
+    bottom: 0;
+    left: 85%;
+    margin: auto 0;
+    height: 40px;
+    width: 40px;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+  .carousel-control-next-icon {
+    background-size: 70% 100%;
+    background-position: 66%;
+  }
+  .carousel-control-prev {
+    top: 40px;
+    bottom: 0;
+    left: 0%;
+    margin: auto 0;
+    height: 40px;
+    width: 40px;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+  .carousel-control-prev-icon {
+    background-size: 70% 100%;
+    background-position: 50%;
+  }
+  .carousel-control-next-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 89%;
+    right: 0%;
+    width: 13%;
+    height: 11%;
+    border: none;
+    outline: none;
+    z-index: 5;
+    display: inline-block;
+    background-color: rgb(245, 240, 236);
+    opacity: 1;
+  }
+  .carousel-control-next-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-image: none;
+  }
+  .carousel-control-next-hero-icon::after {
+    font-family: "Bootstrap-icons";
+    content: "\f138";
+    font-size: 35px;
+    font-weight: 900;
+  }
+  .carousel-control-prev-hero {
+    position: absolute;
+    top: 89%;
+    right: 13%;
+    width: 13%;
+    height: 11%;
+    border: none;
+    outline: none;
+    z-index: 5;
+    display: inline-block;
+    background-color: rgb(245, 240, 236);
+    opacity: 1;
+  }
+  .carousel-control-prev-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-image: none;
+  }
+  .carousel-control-prev-hero-icon::after {
+    font-family: "Bootstrap-icons";
+    content: "\f12f";
+    font-size: 35px;
+    font-weight: 900;
   }
   .offer {
     padding: 25px 0px 160px 0px;
@@ -12653,11 +12780,20 @@ body {
     width: 90%;
     text-align: center;
   }
+  .about__content h4, .about__content .h4 {
+    font-size: 35px;
+  }
+  .about__content p {
+    font-size: 14px;
+  }
   .about__bg {
     height: 100%;
   }
   .grid-item {
     width: 345px;
+  }
+  .projects {
+    padding: 50px 0px 45px 0px;
   }
   .projects__top {
     padding-left: 0;
@@ -12686,11 +12822,27 @@ body {
   .footer__contact {
     gap: 5px;
   }
+  .hidden {
+    transform: translateY(10%);
+  }
+  .show {
+    transform: translateY(0);
+  }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .navbar__form {
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__content {
+    width: 90%;
+  }
+  .hero__content--body {
+    gap: 20px;
+  }
   .hero__content h1, .hero__content .h1 {
-    font-size: 38px;
-    line-height: 45px;
+    font-size: 35px;
+    line-height: 30px;
   }
   .hero__content p {
     line-height: 100%;
@@ -12717,5 +12869,98 @@ body {
   }
   .footer__nav {
     gap: 10px;
+  }
+  .carousel-control-next {
+    top: 40px;
+    bottom: 0;
+    left: 85%;
+    margin: auto 0;
+    height: 80px;
+    width: 80px;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+  .carousel-control-next-icon {
+    background-size: 70% 100%;
+    background-position: 66%;
+  }
+  .carousel-control-prev {
+    top: 40px;
+    bottom: 0;
+    left: 10%;
+    margin: auto 0;
+    height: 80px;
+    width: 80px;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+  .carousel-control-prev-icon {
+    background-size: 70% 100%;
+    background-position: 50%;
+  }
+  .carousel-control-next-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 89%;
+    right: 0%;
+    width: 13%;
+    height: 11%;
+    border: none;
+    outline: none;
+    z-index: 5;
+    display: inline-block;
+    background-color: rgb(245, 240, 236);
+    opacity: 1;
+  }
+  .carousel-control-next-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-image: none;
+  }
+  .carousel-control-next-hero-icon::after {
+    font-family: "Bootstrap-icons";
+    content: "\f138";
+    font-size: 35px;
+    font-weight: 900;
+  }
+  .carousel-control-prev-hero {
+    position: absolute;
+    top: 89%;
+    right: 13%;
+    width: 13%;
+    height: 11%;
+    border: none;
+    outline: none;
+    z-index: 5;
+    display: inline-block;
+    background-color: rgb(245, 240, 236);
+    opacity: 1;
+  }
+  .carousel-control-prev-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-image: none;
+  }
+  .carousel-control-prev-hero-icon::after {
+    font-family: "Bootstrap-icons";
+    content: "\f12f";
+    font-size: 35px;
+    font-weight: 900;
+  }
+  .hidden {
+    transform: translateY(10%);
+  }
+  .show {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -12,6 +12,9 @@ const galleryItem = document.querySelectorAll(".grid-item");
 
 for (let i = 0; i < galleryItem.length; i++) {
 	galleryItem[i].addEventListener("click", (e) => {
+		const projectFix = document.querySelector(".projects");
+		projectFix.classList.remove("hidden");
+		projectFix.classList.remove("show");
 		let modalImage = document.querySelectorAll(".modalCarusel");
 		for (let z = 0; z < modalImage.length; z++) {
 			let src = e.target.getAttribute("src");
@@ -67,6 +70,7 @@ showMoreProjects.addEventListener("click", () => {
 			originTop: true,
 			fitWidth: true,
 		});
+		console.log(projectFix);
 	} else {
 		gridLower.style.display = "none";
 		fade.classList.remove("unActive");
@@ -80,6 +84,25 @@ showMoreProjects.addEventListener("click", () => {
 			fitWidth: true,
 		});
 		grid.scrollIntoView(true);
-		window.scrollY();
 	}
+});
+
+//scroll anim
+const sectionsHidden = document.querySelectorAll(".hidden");
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add("show");
+		} else {
+			entry.target.classList.remove("show");
+		}
+		if (entry.target.classList.contains("projects")) {
+			entry.target.classList.add("hidden");
+		}
+	});
+});
+
+sectionsHidden.forEach((section) => {
+	observer.observe(section);
 });

@@ -1,13 +1,18 @@
 @use "./abstract/variables" as *;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&family=Montserrat:ital,wght@0,100;0,300;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
+	background-color: $grey;
 }
 
+.mainHeader {
+	background-color: $white;
+}
 .navbar {
 	width: 80%;
 	padding: 25px 0px;
@@ -103,18 +108,23 @@ body {
 
 .hero {
 	height: 100%;
-	background-color: $beige;
+	&__left {
+		background-color: $beige;
+	}
 	&__content {
-		width: 70%;
+		width: 56%;
+		&--body {
+			gap: 72px;
+		}
 		h1 {
-			font-family: Montserrat;
+			font-family: "Montserrat", sans-serif;
 			font-size: 60px;
 			font-style: normal;
 			font-weight: 500;
 			line-height: 70px;
 		}
 		p {
-			font-family: Inter;
+			font-family: "Inter", sans-serif;
 			font-size: 16px;
 			font-style: normal;
 			font-weight: 400;
@@ -216,6 +226,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	margin-top: 1rem;
 	gap: 96px;
 	padding: 120px 0px 160px 0px;
 	background-color: $grey;
@@ -223,7 +234,7 @@ body {
 		text-align: left;
 		width: 100%;
 		h2 {
-			font-family: Montserrat;
+			font-family: "Montserrat", sans-serif;
 			font-size: 48px;
 			font-style: normal;
 			font-weight: 500;
@@ -231,7 +242,7 @@ body {
 			letter-spacing: -1.44px;
 		}
 		p {
-			font-family: Inter;
+			font-family: "Inter", sans-serif;
 			font-size: 16px;
 			font-style: normal;
 			font-weight: 400;
@@ -240,7 +251,7 @@ body {
 			width: 100%;
 
 			&:first-child {
-				font-family: Inter;
+				font-family: "Inter", sans-serif;
 				font-size: 16px;
 				font-style: normal;
 				font-weight: 400;
@@ -301,21 +312,21 @@ body {
 		height: 100%;
 		width: 50%;
 		h4 {
-			font-family: Inter;
+			font-family: "Inter", sans-serif;
 			font-size: 48px;
 			font-style: italic;
 			font-weight: 500;
 			line-height: 115%;
 		}
 		p {
-			font-family: Inter;
+			font-family: "Inter", sans-serif;
 			font-size: 16px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: 150%;
 			letter-spacing: -0.16px;
 			&:first-child {
-				font-family: Inter;
+				font-family: "Inter", sans-serif;
 				font-size: 12px;
 				font-style: normal;
 				font-weight: 400;
@@ -332,7 +343,7 @@ body {
 	&__top {
 		padding-left: 160px;
 		span {
-			font-family: Inter;
+			font-family: "Inter", sans-serif;
 			font-size: 12px;
 			font-style: normal;
 			font-weight: 400;
@@ -341,7 +352,7 @@ body {
 			color: $green;
 		}
 		h2 {
-			font-family: Montserrat;
+			font-family: "Montserrat", sans-serif;
 			font-size: 48px;
 			font-style: italic;
 			font-weight: 500;
@@ -392,14 +403,14 @@ body {
 		justify-content: center;
 
 		h4 {
-			font-family: Montserrat;
+			font-family: "Montserrat", sans-serif;
 			font-size: 40px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: 120%;
 			letter-spacing: -2px;
 			span {
-				font-family: Inter;
+				font-family: "Inter", sans-serif;
 				font-size: 40px;
 				font-style: italic;
 				font-weight: 500;
@@ -470,10 +481,26 @@ body {
 		transform: scale(1.01);
 	}
 }
+.hidden {
+	opacity: 0;
+	filter: blur(2px);
+	transform: translateY(20%);
+	transition: all 1s;
+}
+
+.show {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+}
 
 @media (max-width: 575.98px) {
 	.hero {
 		&__content {
+			width: 100%;
+			&--body {
+				gap: 10px;
+			}
 			h1 {
 				font-size: 30px;
 				line-height: 28px;
@@ -676,10 +703,19 @@ body {
 			}
 		}
 	}
+	.hidden {
+		transform: translateY(5%);
+	}
+	.show {
+		transform: translateY(0);
+	}
 }
 @media (min-width: 575.98px) and (max-width: 767.98px) {
 	.hero {
 		&__content {
+			&--body {
+				gap: 20px;
+			}
 			h1 {
 				font-size: 30px;
 				line-height: 28px;
@@ -694,6 +730,96 @@ body {
 			max-height: 250px;
 		}
 	}
+	.carousel-control {
+		&-next {
+			top: 40px;
+			bottom: 0;
+			left: 85%;
+			margin: auto 0;
+			height: 40px;
+			width: 40px;
+			opacity: 0.5;
+			border-radius: 50%;
+			&-icon {
+				background-size: 70% 100%;
+				background-position: 66%;
+			}
+		}
+		&-prev {
+			top: 40px;
+			bottom: 0;
+			left: 0%;
+			margin: auto 0;
+			height: 40px;
+			width: 40px;
+			opacity: 0.5;
+			border-radius: 50%;
+			&-icon {
+				background-size: 70% 100%;
+				background-position: 50%;
+			}
+		}
+		&-next-hero {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 89%;
+			right: 0%;
+			width: 13%;
+			height: 11%;
+			border: none;
+			outline: none;
+			z-index: 5;
+			display: inline-block;
+			background-color: rgba(245, 240, 236, 1);
+			opacity: 1;
+			&-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+				color: black;
+				background-image: none;
+				&::after {
+					font-family: "Bootstrap-icons";
+					content: "\F138";
+					font-size: 35px;
+					font-weight: 900;
+				}
+			}
+		}
+		&-prev-hero {
+			position: absolute;
+			top: 89%;
+			right: 13%;
+			width: 13%;
+			height: 11%;
+			border: none;
+			outline: none;
+			z-index: 5;
+			display: inline-block;
+			background-color: rgba(245, 240, 236, 1);
+			opacity: 1;
+			&-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+				color: black;
+				background-image: none;
+				&::after {
+					font-family: "Bootstrap-icons";
+					content: "\F12F";
+					font-size: 35px;
+					font-weight: 900;
+				}
+			}
+		}
+	}
+
 	.offer {
 		padding: 25px 0px 160px 0px;
 		gap: 20px;
@@ -718,6 +844,12 @@ body {
 		&__content {
 			width: 90%;
 			text-align: center;
+			h4 {
+				font-size: 35px;
+			}
+			p {
+				font-size: 14px;
+			}
 		}
 		&__bg {
 			height: 100%;
@@ -727,6 +859,7 @@ body {
 		width: 345px;
 	}
 	.projects {
+		padding: 50px 0px 45px 0px;
 		&__top {
 			padding-left: 0;
 			text-align: center;
@@ -757,13 +890,30 @@ body {
 			gap: 5px;
 		}
 	}
+
+	.hidden {
+		transform: translateY(10%);
+	}
+	.show {
+		transform: translateY(0);
+	}
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
+	.navbar {
+		&__form{
+			align-items: center;
+			justify-content: center;
+		}
+	}
 	.hero {
 		&__content {
+			width: 90%;
+			&--body {
+				gap: 20px;
+			}
 			h1 {
-				font-size: 38px;
-				line-height: 45px;
+				font-size: 35px;
+				line-height: 30px;
 			}
 			p {
 				line-height: 100%;
@@ -796,5 +946,101 @@ body {
 		&__nav {
 			gap: 10px;
 		}
+	}
+	.carousel-control {
+		&-next {
+			top: 40px;
+			bottom: 0;
+			left: 85%;
+			margin: auto 0;
+			height: 80px;
+			width: 80px;
+			opacity: 0.5;
+			border-radius: 50%;
+			&-icon {
+				background-size: 70% 100%;
+				background-position: 66%;
+			}
+		}
+		&-prev {
+			top: 40px;
+			bottom: 0;
+			left: 10%;
+			margin: auto 0;
+			height: 80px;
+			width: 80px;
+			opacity: 0.5;
+			border-radius: 50%;
+			&-icon {
+				background-size: 70% 100%;
+				background-position: 50%;
+			}
+		}
+		&-next-hero {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 89%;
+			right: 0%;
+			width: 13%;
+			height: 11%;
+			border: none;
+			outline: none;
+			z-index: 5;
+			display: inline-block;
+			background-color: rgba(245, 240, 236, 1);
+			opacity: 1;
+			&-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+				color: black;
+				background-image: none;
+				&::after {
+					font-family: "Bootstrap-icons";
+					content: "\F138";
+					font-size: 35px;
+					font-weight: 900;
+				}
+			}
+		}
+		&-prev-hero {
+			position: absolute;
+			top: 89%;
+			right: 13%;
+			width: 13%;
+			height: 11%;
+			border: none;
+			outline: none;
+			z-index: 5;
+			display: inline-block;
+			background-color: rgba(245, 240, 236, 1);
+			opacity: 1;
+			&-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+				color: black;
+				background-image: none;
+				&::after {
+					font-family: "Bootstrap-icons";
+					content: "\F12F";
+					font-size: 35px;
+					font-weight: 900;
+				}
+			}
+		}
+	}
+
+	.hidden {
+		transform: translateY(10%);
+	}
+	.show {
+		transform: translateY(0);
 	}
 }
