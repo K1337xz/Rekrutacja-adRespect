@@ -70,7 +70,6 @@ showMoreProjects.addEventListener("click", () => {
 			originTop: true,
 			fitWidth: true,
 		});
-		console.log(projectFix);
 	} else {
 		gridLower.style.display = "none";
 		fade.classList.remove("unActive");
