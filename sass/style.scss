@@ -577,6 +577,7 @@ body {
 		}
 	}
 	.carousel-item {
+		margin-bottom: 34px;
 		img {
 			max-height: 250px;
 		}
@@ -791,6 +792,7 @@ body {
 @media (min-width: 575.98px) and (max-width: 767.98px) {
 	.hero {
 		&__content {
+			width: 70%;
 			&--body {
 				gap: 20px;
 			}
