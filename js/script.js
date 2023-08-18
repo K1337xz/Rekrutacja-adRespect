@@ -26,7 +26,6 @@ for (let i = 0; i < galleryItem.length; i++) {
 				);
 				modal.show();
 			} else {
-				console.log("err");
 			}
 		}
 	});

@@ -9,7 +9,6 @@
 			href="/images/logo-white.svg"
 			type="image/x-icon"
 		/>
-
 		<title>GiardDesign</title>
 		<script
 			defer
@@ -17,11 +16,11 @@
 			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 			crossorigin="anonymous"
 		></script>
-		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
 		/>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	</head>
 	<body>
 		<header class="mainHeader d-flex justify-content-center">
@@ -114,7 +113,7 @@
 		<main class="main">
 			<section class="hero hidden">
 				<div class="container-fluid h-100 p-0">
-					<div id="heroCarusel" class="carousel slide">
+					<div id="carouselExample" class="carousel slide">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<div class="card">
@@ -232,7 +231,7 @@
 						<button
 							class="carousel-control-prev-hero"
 							type="button"
-							data-bs-target="#heroCarusel"
+							data-bs-target="#carouselExample"
 							data-bs-slide="prev"
 						>
 							<span
@@ -244,7 +243,7 @@
 						<button
 							class="carousel-control-next-hero"
 							type="button"
-							data-bs-target="#heroCarusel"
+							data-bs-target="#carouselExample"
 							data-bs-slide="next"
 						>
 							<span
@@ -409,26 +408,23 @@
 						<div class="grid-item grid-item--height3">
 							<img src="./images/Photo-6.png" alt="photo 7" />
 						</div>
-
 						<div class="grid-item grid-item--height3">
 							<img src="./images/Photo-4.png" alt="photo 2" />
 						</div>
 						<div class="grid-item grid-item--height1">
 							<img src="./images/Photo-3.png" alt="photo 1" />
 						</div>
-
 						<div class="grid-item grid-item--height3">
 							<img src="./images/Photo-5.png" alt="photo 11" />
 						</div>
-
 						<div class="grid-item">
 							<img src="./images/Photo-1.png" />
 						</div>
 						<div class="grid-item">
-							<img src="./images/photo-2.png" alt="photo 2 " />
+							<img src="./images/Photo-2.png" alt="photo 10" />
 						</div>
 						<div class="grid-item">
-							<img src="./images/photo.png" alt="photo 6" />
+							<img src="./images/Photo.png" alt="photo 6" />
 						</div>
 						<div class="grid__lower">
 							<div class="grid-item">
@@ -471,7 +467,7 @@
 					<button
 						class="carousel-control-prev"
 						type="button"
-						data-bs-target="#modalCarusel"
+						data-bs-target="#carouselExampleControls"
 						data-bs-slide="prev"
 					>
 						<span
@@ -483,7 +479,7 @@
 					<button
 						class="carousel-control-next"
 						type="button"
-						data-bs-target="#modalCarusel"
+						data-bs-target="#carouselExampleControls"
 						data-bs-slide="next"
 					>
 						<span
@@ -496,7 +492,7 @@
 						class="modal-dialog modal-dialog-centered justify-content-center"
 					>
 						<div
-							id="#modalCarusel"
+							id="carouselExampleControls"
 							class="carousel carousel-dark slide"
 						>
 							<div class="carousel-inner">
@@ -504,106 +500,106 @@
 									<img
 										src="./images/Photo-1.png"
 										class="modalImage object-fit-contain"
-										alt="First photo in slider"
+										alt="first photo in fullscreen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
-										src="./images/photo-2.png"
+										src="./images/Photo-2.png"
 										class="modalImage object-fit-contain"
-										alt="Photo 2"
+										alt="second photo in fullscreen"
 									/>
 								</div>
-
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/Photo-3.png"
 										class="modalImage object-fit-contain"
-										alt="Photo 3"
+										alt="third photo in fullscreen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/Photo-4.png"
 										class="modalImage object-fit-contain"
-										alt="Photo 4"
+										alt="fourth photo in fullscreen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/Photo-5.png"
 										class="modalImage object-fit-contain"
-										alt="Photo 5"
+										alt="fifth photo in fullscreen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/Photo-6.png"
 										class="modalImage object-fit-contain"
-										alt="Photo 6"
+										alt="sixth photo in fullscreen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/Photo-7.png"
 										class="modalImage object-fit-contain"
-										alt="Photo 7"
+										alt="the seventh photo in full screen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/Photo-8.png"
 										class="modalImage object-fit-contain"
-										alt="Photo 8"
+										alt="eighth photo in full screen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
+										src="./images/Photo-9.jpg"
 										src="./images/photo-9.jpg"
 										class="modalImage object-fit-contain"
-										alt="Photo 9"
+										alt="ninth photo in full screen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/photo-10.jpg"
 										class="modalImage object-fit-contain"
-										alt="Photo 10"
+										alt="tenth photo in full screen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/photo-13.jpg"
 										class="modalImage object-fit-contain"
-										alt="Photo 13"
+										alt="thirteenth photo in full screen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/photo-14.jpg"
 										class="modalImage object-fit-contain"
-										alt="Photo 14"
+										alt="fourtheenth photo in full screen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/photo-15.jpg"
 										class="modalImage object-fit-contain"
-										alt="Photo 15"
+										alt="fifteenth photo in full screen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/photo-16.jpg"
 										class="modalImage object-fit-contain"
-										alt="Photo 16"
+										alt="sixteenth photo in full screen"
 									/>
 								</div>
 								<div class="modalCarusel carousel-item">
 									<img
 										src="./images/photo-17.jpg"
 										class="modalImage object-fit-contain"
-										alt="Photo 17"
+										alt="seventeenth photo in full screen"
 									/>
 								</div>
 							</div>
